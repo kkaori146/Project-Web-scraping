@@ -6,4 +6,5 @@ r=requests.get(url)
 
 soup = BeautifulSoup(r.content, 'html.parser')
 
-soup.find('figure')
+print(soup.find('figure').h5.text)
+print(soup.find('figure').find('i', class_='fa-link').next_element.next_element.text)
